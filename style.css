@@ -1,0 +1,123 @@
+/*
+COLORs
+color-grey-dark: #282828;
+color-grey: #4f4f4f;
+color-grey-light: #6c6c6c;
+
+color-orange: orange; 
+
+FONTs
+font-primary: 'Roboto', sans-serif;;
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  --color-white: #fff;
+  --color-grey-dark: #282828;
+  --color-grey-lighter: #2e2e2e;
+  --color-grey: #4f4f4f;
+  --color-grey-light: #6c6c6c;
+  --color-orange: rgb(231, 155, 13);
+  --color-orange-darker: rgb(199, 131, 5);
+  --font-primary: 'Roboto', sans-serif;
+}
+
+body {
+  position: relative;
+  font-family: var(--font-primary);
+  background-color: #999;
+}
+
+/*
+Calc body design
+*/
+
+.calc {
+  --gap: 0.8rem;
+  width: 55rem;
+  height: 85rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%) translateY(5%);
+  /* background-image: repeating-linear-gradient(
+    to right bottom,
+    var(--color-grey-light) 0%,
+    var(--color-grey-light) 1%,
+    var(--color-grey) 1%,
+    var(--color-grey) 2%
+  ); */
+  background-color: var(--color-grey);
+  display: flex;
+  flex-direction: column;
+  gap: var(--gap);
+}
+
+/*
+Calc rows
+
+*/
+
+.row {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: row-reverse;
+  background-color: transparent;
+  justify-content: space-evenly;
+}
+
+.row:last-child {
+  margin-bottom: var(--gap);
+}
+
+.row:first-child {
+  margin-top: var(--gap);
+}
+
+.screen {
+  flex-grow: 1, 5;
+  background-color: var(--color-grey-lighter);
+  margin: 0 var(--gap);
+  font-size: 6rem;
+  color: var(--color-white);
+}
+
+.key {
+  width: calc(25% - var(--gap));
+  font-size: 5rem;
+  font-family: inherit;
+  background-color: var(--color-grey-dark);
+  outline: none;
+  border: none;
+  color: var(--color-white);
+  box-shadow: 0 0.3rem 0.5rem var(--color-grey-lighter);
+  cursor: pointer;
+  transition: all 0.1s;
+}
+
+.key:hover {
+  background-color: var(--color-grey-lighter);
+  transform: translateY(-0.3rem);
+  box-shadow: 0 0.5rem 1rem var(--color-grey-lighter);
+}
+
+.key:active {
+  transform: translateY(0.1rem);
+  box-shadow: none;
+}
+
+.key-orange {
+  background-color: var(--color-orange);
+}
+
+.key-orange:hover {
+  background-color: var(--color-orange-darker);
+}
