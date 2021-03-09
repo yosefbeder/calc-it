@@ -41,9 +41,9 @@ Calc body design
 */
 
 .calc {
-  --gap: 0.8rem;
-  width: 55rem;
-  height: 85rem;
+  --gap: 0.6rem;
+  width: 45rem;
+  height: 65rem;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -83,11 +83,12 @@ Calc rows
 }
 
 .screen {
-  flex-grow: 1, 5;
+  flex-grow: 1.5;
   background-color: var(--color-grey-lighter);
   margin: 0 var(--gap);
-  font-size: 6rem;
+  font-size: 4rem;
   color: var(--color-white);
+  overflow: hidden;
 }
 
 .key {
@@ -97,10 +98,20 @@ Calc rows
   background-color: var(--color-grey-dark);
   outline: none;
   border: none;
-  color: var(--color-white);
+  color: var(--color-grey-light);
   box-shadow: 0 0.3rem 0.5rem var(--color-grey-lighter);
   cursor: pointer;
   transition: all 0.1s;
+}
+
+.col-3 {
+  width: calc(50% - (25% - var(--gap)) / 2 - var(--gap) * 2);
+  background-color: var(--color-grey-light);
+  color: var(--color-grey-dark);
+}
+
+.col-3:hover {
+  color: var(--color-grey-light);
 }
 
 .key:hover {
@@ -116,6 +127,7 @@ Calc rows
 
 .key-orange {
   background-color: var(--color-orange);
+  color: var(--color-white);
 }
 
 .key-orange:hover {

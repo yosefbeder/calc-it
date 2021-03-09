@@ -12,41 +12,44 @@
     />
 
     <link rel="stylesheet" href="style.css" />
+
     <title>Document</title>
   </head>
   <body>
     <div class="calc">
-      <div class="row screen">2&#x2212;23&#x2b;73</div>
+      <div class="row screen">&nbsp;</div>
       <div class="row">
-        <button class="key key-orange">&#xf7;</button>
-        <button class="key"><i class="fas fa-backspace"></i></button>
-        <button class="key">&#x25;</button>
-        <button class="key">&#x2201;</button>
+        <button class="key key-orange key-sym" data-value="/">&#xf7;</button>
+        <button class="key key-delete col-3">
+          <i class="fas fa-backspace"></i>
+        </button>
+        <button class="key key-delete-all col-3">&#x2201;</button>
       </div>
       <div class="row">
-        <button class="key key-orange">&#xd7;</button>
-        <button class="key">9</button>
-        <button class="key">8</button>
-        <button class="key">7</button>
+        <button class="key key-orange key-sym" data-value="*">&#xd7;</button>
+        <button class="key key-num">9</button>
+        <button class="key key-num">8</button>
+        <button class="key key-num">7</button>
       </div>
       <div class="row">
-        <button class="key key-orange">&#x2212;</button>
-        <button class="key">6</button>
-        <button class="key">5</button>
-        <button class="key">4</button>
+        <button class="key key-orange key-m" data-value="-">&#x2212;</button>
+        <button class="key key-num">6</button>
+        <button class="key key-num">5</button>
+        <button class="key key-num">4</button>
       </div>
       <div class="row">
-        <button class="key key-orange">&#x2b;</button>
-        <button class="key">3</button>
-        <button class="key">2</button>
-        <button class="key">1</button>
+        <button class="key key-orange key-sym" data-value="+">&#x2b;</button>
+        <button class="key key-num">3</button>
+        <button class="key key-num">2</button>
+        <button class="key key-num">1</button>
       </div>
       <div class="row">
-        <button class="key key-orange">&#x3d;</button>
-        <button class="key">.</button>
-        <button class="key">0</button>
-        <button class="key">00</button>
+        <button class="key key-orange key-equal">&#x3d;</button>
+        <button class="key key-dot">.</button>
+        <button class="key key-num">0</button>
+        <button class="key key-num">00</button>
       </div>
     </div>
+    <script src="script.js"></script>
   </body>
 </html>
