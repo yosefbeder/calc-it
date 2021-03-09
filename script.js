@@ -102,6 +102,8 @@ const reset = function () {
 };
 
 const dl = function () {
+  if (getLastNum() == 'Infinity') reset();
+
   ln = screen.textContent.length;
   if (getLastScreen() != '\xa0') {
     screen.textContent = screen.textContent.slice(0, ln - 1);
@@ -132,7 +134,11 @@ keyM.addEventListener('click', function () {
 });
 
 keyEqual.addEventListener('click', function () {
-  screen.textContent = solveString(screen.textContent);
+  if (solveString(getScreen()) != '\xa0NaN') {
+    screen.textContent = solveString(getScreen());
+  } else {
+    alert("A syntax error: Please check what you've written");
+  }
 });
 
 keyDot.addEventListener('click', function () {
